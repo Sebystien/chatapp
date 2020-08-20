@@ -1,0 +1,197 @@
+//All the components such as profile and chat will be here
+
+//individual component
+.arrow {
+  width: 1rem;
+  height: 1rem;
+
+  &--left {
+    border-top: 0.3rem solid $neutral-bg;
+    border-left: 0.3rem solid $neutral-bg;
+    transform: rotate(-45deg) scale(0.6);
+    margin-right: 0.4rem;
+  }
+
+  &--right {
+    border-bottom: 0.3rem solid $neutral-bg;
+    border-right: 0.3rem solid $neutral-bg;
+    transform: rotate(-45deg) scale(0.7);
+    padding-left: -1rem;
+    margin: 0.6rem 0 0 0.4rem;
+  }
+}
+
+//Submit component, button and text field
+
+.submit {
+  background: white;
+  width: 90%;
+  margin: 2rem auto;
+  padding: 0.8rem 0 0.8rem 1.5rem;
+  border-radius: 3rem;
+
+  &__p {
+    font-size: 1rem;
+    display: inline-block;
+    width: 85%;
+  }
+
+  &__bg {
+    background: $accent-submit;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    text-align: right;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+//User
+.user {
+  color: $neutral-bg;
+  height: 7rem;
+  padding: 1rem 1.5rem 0 1.5rem;
+  background: linear-gradient(-45deg, ($gradient-light), ($gradient-dark));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+
+  &__profile {
+    flex: 2;
+
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    &--img {
+      display: inline-block;
+
+      img {
+        width: 2.3rem;
+        border-radius: 50%;
+        border: 1px solid $neutral-bg;
+      }
+    }
+
+    .sub-heading {
+      display: inline-block;
+      margin-left: 0.5rem;
+      margin-top: 0.7rem;
+
+      font-weight: 400;
+
+      &--bold {
+        display: block;
+        font-size: 1.2rem;
+
+        margin-bottom: -0.8rem;
+      }
+
+      &--light {
+        color: $color-subheading-ui;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+//Chat
+
+.chat--bubble {
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  height: 66%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  //Messed up didn't want to arrange them
+  &__left {
+    text-align: left;
+    color: $color-chat-left;
+    background: rgba($color-chat-left, 0.1);
+    width: 60%;
+    padding: 0.5rem 1rem;
+
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+  }
+
+  &__right {
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+
+    color: rgba($color-chat-right, .8);
+    align-self: flex-end;
+
+    &:nth-child(4) {
+      width: 70%;
+    }
+
+    &:nth-child(5) {
+      border-bottom-left-radius: 0.7rem;
+      border-bottom-right-radius: 0.5rem;
+      border-top-right-radius: 0.7rem;
+      border-top-left-radius: 0.7rem;
+    }
+  }
+
+  .chats--right {
+    background: $neutral-white;
+    padding: 0.5rem 1rem;
+    box-shadow: 0 0.3rem 0.5rem 0.2rem rgba($color-paragraph, 0.1);
+  }
+
+  .img>* {
+    /*  margin-top: 1.5rem; */
+    height: 4rem;
+    margin-left: 0.5rem;
+    border-radius: 0.8rem;
+  }
+
+  .price {
+    background: linear-gradient(-90deg, $gradient-dark, $gradient-light);
+    width: 70%;
+    padding: .8rem 0;
+    color: $neutral-bg;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+
+    &:last-child {
+      margin-bottom: -2rem;
+    }
+
+    &__p {
+      font-size: 0.8rem;
+      color: $color-subheading-ui;
+    }
+
+    .circle {
+      display: inline-block;
+      border: 0.1rem $accent-radio-outline solid;
+      height: 1rem;
+      width: 1rem;
+      border-radius: 50%;
+      margin: 0 1rem;
+      vertical-align: middle;
+    }
+
+    .pricing {
+      display: inline-block;
+      color: rgba($neutral-white, .85);
+      margin-left: 2rem;
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: 0.1rem;
+    }
+  }
+}

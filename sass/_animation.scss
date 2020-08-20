@@ -1,0 +1,39 @@
+//You'll find all the animation here
+
+//that's for the backgrounds
+
+@mixin animateBg($width) {
+  @keyframes bg {
+    0% {
+      height: 20%;
+    }
+
+    100% {
+      height: $width;
+    }
+  }
+}
+
+@keyframes hero {
+  0% {
+    opacity: 0;
+    display: none;
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes phone {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
